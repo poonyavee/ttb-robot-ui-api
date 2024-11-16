@@ -1,138 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-11-16T15:39:37.064941" rpa="false" schemaversion="5">
-<suite id="s1" name="Get User Profile" source="/Users/poonyavee/Documents/ttb test/tests/api/get_user_profile.robot">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-11-16T17:00:26.705248" rpa="false" schemaversion="5">
+<suite id="s1" name="Get User Profile" source="/Users/poonyavee/ttb-robot-ui-api/tests/api/get_user_profile.robot">
 <test id="s1-t1" name="TC_API_001 Get User Profile Success" line="25">
 <kw name="Get User Profile">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-16T15:39:37.546373" level="INFO">${url} = https://reqres.in/api/users/12</msg>
+<msg time="2024-11-16T17:00:27.496509" level="INFO">${url} = https://reqres.in/api/users/12</msg>
 <var>${url}</var>
 <arg>${BASE_URL}/${user_id}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.545746" elapsed="0.000717"/>
+<status status="PASS" start="2024-11-16T17:00:27.496178" elapsed="0.000387"/>
 </kw>
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-11-16T15:39:37.628291" level="INFO">GET Request : url=https://reqres.in/api/users/12 
+<msg time="2024-11-16T17:00:27.629179" level="INFO">GET Request : url=https://reqres.in/api/users/12 
  path_url=/api/users/12 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-11-16T15:39:37.628628" level="INFO">GET Response : url=https://reqres.in/api/users/12 
+<msg time="2024-11-16T17:00:27.629526" level="INFO">GET Response : url=https://reqres.in/api/users/12 
  status=200, reason=OK 
- headers={'Date': 'Sat, 16 Nov 2024 08:39:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731744746&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=eSfavBs%2Fcd8ay58soUj4t%2FK6tXrx3iYE697Aj38%2BbDM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731744746&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=eSfavBs%2Fcd8ay58soUj4t%2FK6tXrx3iYE697Aj38%2BbDM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"156-dRpOqAStViWxQQvYl7n1A1GXGFw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '1631', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e362becaca5a1bc-BKK', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=3551&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=771&amp;delivery_rate=745920&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=2e1a96835c8106ef&amp;ts=41&amp;x=0"'} 
+ headers={'Date': 'Sat, 16 Nov 2024 10:00:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731744746&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=eSfavBs%2Fcd8ay58soUj4t%2FK6tXrx3iYE697Aj38%2BbDM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731744746&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=eSfavBs%2Fcd8ay58soUj4t%2FK6tXrx3iYE697Aj38%2BbDM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"156-dRpOqAStViWxQQvYl7n1A1GXGFw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '6481', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e36a25629e4a1b1-BKK', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=4432&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=771&amp;delivery_rate=491719&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=ee30682ecebfea4b&amp;ts=36&amp;x=0"'} 
  body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
  </msg>
-<msg time="2024-11-16T15:39:37.628978" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-11-16T17:00:27.629895" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${url}</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.546772" elapsed="0.082283"/>
+<status status="PASS" start="2024-11-16T17:00:27.497689" elapsed="0.132282"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2024-11-16T15:39:37.629257" elapsed="0.000124"/>
+<status status="PASS" start="2024-11-16T17:00:27.630174" elapsed="0.000122"/>
 </return>
-<msg time="2024-11-16T15:39:37.629784" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-11-16T17:00:27.630698" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${VALID_USER_ID}</arg>
-<status status="PASS" start="2024-11-16T15:39:37.544240" elapsed="0.085614"/>
+<status status="PASS" start="2024-11-16T17:00:27.495253" elapsed="0.135512"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-11-16T15:39:37.632079" level="INFO">Argument types are:
+<msg time="2024-11-16T17:00:27.632811" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.630342" elapsed="0.001962"/>
+<status status="PASS" start="2024-11-16T17:00:27.631326" elapsed="0.002396"/>
 </kw>
 <kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-11-16T15:39:37.634415" level="INFO">${response_body} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://contentcaddy.i...</msg>
+<msg time="2024-11-16T17:00:27.635412" level="INFO">${response_body} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://contentcaddy.i...</msg>
 <var>${response_body}</var>
 <arg>${response.content}</arg>
 <doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-11-16T15:39:37.632964" elapsed="0.001548"/>
+<status status="PASS" start="2024-11-16T17:00:27.634143" elapsed="0.001326"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-11-16T15:39:37.638263" level="INFO">Argument types are:
+<msg time="2024-11-16T17:00:27.640438" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response_body['data']['id']}</arg>
 <arg>${EXPECTED_ID}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.635680" elapsed="0.002704"/>
+<status status="PASS" start="2024-11-16T17:00:27.635840" elapsed="0.004710"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['email']}</arg>
 <arg>${EXPECTED_EMAIL}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.638657" elapsed="0.000753"/>
+<status status="PASS" start="2024-11-16T17:00:27.640826" elapsed="0.001240"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['first_name']}</arg>
 <arg>${EXPECTED_FIRST_NAME}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.639616" elapsed="0.000697"/>
+<status status="PASS" start="2024-11-16T17:00:27.642310" elapsed="0.004332"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['last_name']}</arg>
 <arg>${EXPECTED_LAST_NAME}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.641000" elapsed="0.002842"/>
+<status status="PASS" start="2024-11-16T17:00:27.647140" elapsed="0.001000"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['avatar']}</arg>
 <arg>${EXPECTED_AVATAR}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.644217" elapsed="0.001125"/>
+<status status="PASS" start="2024-11-16T17:00:27.648396" elapsed="0.000711"/>
 </kw>
 <doc>To verify get user profile API will return correct data when trying to get profile of an existing user</doc>
-<status status="PASS" start="2024-11-16T15:39:37.542438" elapsed="0.103236"/>
+<status status="PASS" start="2024-11-16T17:00:27.493734" elapsed="0.155605"/>
 </test>
 <test id="s1-t2" name="TC_API_002 Get User Profile But User Not Found" line="36">
 <kw name="Get User Profile">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-16T15:39:37.661764" level="INFO">${url} = https://reqres.in/api/users/1234</msg>
+<msg time="2024-11-16T17:00:27.652385" level="INFO">${url} = https://reqres.in/api/users/1234</msg>
 <var>${url}</var>
 <arg>${BASE_URL}/${user_id}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-16T15:39:37.659122" elapsed="0.002736"/>
+<status status="PASS" start="2024-11-16T17:00:27.651947" elapsed="0.000485"/>
 </kw>
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-11-16T15:39:37.703168" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
+<msg time="2024-11-16T17:00:28.201369" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
  path_url=/api/users/1234 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-11-16T15:39:37.703288" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
+<msg time="2024-11-16T17:00:28.201695" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
  status=404, reason=Not Found 
- headers={'Date': 'Sat, 16 Nov 2024 08:39:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731746198&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=u4q%2FK0LG55Nmwd%2F2OcmnNQ9iQAdStED4R88FJ8IPBPE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731746198&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=u4q%2FK0LG55Nmwd%2F2OcmnNQ9iQAdStED4R88FJ8IPBPE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '179', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e362bed39218945-BKK', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=3985&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=773&amp;delivery_rate=700389&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=b2ef4216e147878e&amp;ts=26&amp;x=0"'} 
+ headers={'Date': 'Sat, 16 Nov 2024 10:00:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731751228&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Tm7bc6KFsftv43JTPgOrVrtgijL%2Fq43aGLguy1bfLTQ%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731751228&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Tm7bc6KFsftv43JTPgOrVrtgijL%2Fq43aGLguy1bfLTQ%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e36a2569e308960-BKK', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=4005&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2837&amp;recv_bytes=773&amp;delivery_rate=702781&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=f4c8a3f15152a77f&amp;ts=483&amp;x=0"'} 
  body={} 
  </msg>
-<msg time="2024-11-16T15:39:37.703496" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</msg>
+<msg time="2024-11-16T17:00:28.202140" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</msg>
 <var>${response}</var>
 <arg>${url}</arg>
 <doc>Sends a GET request.</doc>
-<status status="FAIL" start="2024-11-16T15:39:37.662244" elapsed="0.048133">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
+<status status="FAIL" start="2024-11-16T17:00:27.652638" elapsed="0.559755">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
 </kw>
 <return>
 <value>${response}</value>
-<status status="NOT RUN" start="2024-11-16T15:39:37.710509" elapsed="0.000030"/>
+<status status="NOT RUN" start="2024-11-16T17:00:28.212585" elapsed="0.000043"/>
 </return>
 <var>${response}</var>
 <arg>${INVALID_USER_ID}</arg>
-<status status="FAIL" start="2024-11-16T15:39:37.650177" elapsed="0.060531">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
+<status status="FAIL" start="2024-11-16T17:00:27.650808" elapsed="0.562078">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <arg>Should Be Equal As Numbers</arg>
 <arg>${response.status_code}</arg>
 <arg>404</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2024-11-16T15:39:37.711010" elapsed="0.000042"/>
+<status status="NOT RUN" start="2024-11-16T17:00:28.213373" elapsed="0.000069"/>
 </kw>
 <doc>To verify get user profile API will return 404 when trying to get a profile of a non-existing user</doc>
-<status status="FAIL" start="2024-11-16T15:39:37.646534" elapsed="0.064851">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
+<status status="FAIL" start="2024-11-16T17:00:27.649695" elapsed="0.564181">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
 </test>
-<status status="FAIL" start="2024-11-16T15:39:37.067866" elapsed="0.644348"/>
+<status status="FAIL" start="2024-11-16T17:00:26.720037" elapsed="1.494670"/>
 </suite>
 <statistics>
 <total>
@@ -145,6 +145,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-16T15:39:37.059436" level="WARN">Error in file '/Users/poonyavee/Documents/ttb test/tests/api/get_user_profile.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-16T17:00:26.694996" level="WARN">Error in file '/Users/poonyavee/ttb-robot-ui-api/tests/api/get_user_profile.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>
