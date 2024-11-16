@@ -22,7 +22,7 @@ pipeline {
         
         stage('Send Result To Jenkins') {
             steps {
-                junit '**/results/*.xml'
+                junit 'output.xml'
             }
         }
     }
