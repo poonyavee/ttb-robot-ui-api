@@ -1,150 +1,376 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-11-16T17:00:26.705248" rpa="false" schemaversion="5">
-<suite id="s1" name="Get User Profile" source="/Users/poonyavee/ttb-robot-ui-api/tests/api/get_user_profile.robot">
-<test id="s1-t1" name="TC_API_001 Get User Profile Success" line="25">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-11-16T22:45:50.662264" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/poonyavee/ttb-robot-ui-api/tests">
+<suite id="s1-s1" name="Api" source="/Users/poonyavee/ttb-robot-ui-api/tests/api">
+<suite id="s1-s1-s1" name="Get User Profile" source="/Users/poonyavee/ttb-robot-ui-api/tests/api/get_user_profile.robot">
+<test id="s1-s1-s1-t1" name="TC_API_001 Get User Profile Success" line="24">
 <kw name="Get User Profile">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-16T17:00:27.496509" level="INFO">${url} = https://reqres.in/api/users/12</msg>
-<var>${url}</var>
-<arg>${BASE_URL}/${user_id}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.496178" elapsed="0.000387"/>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-16T22:45:51.207650" level="INFO">Creating Session using : alias=Get_user_profile_success, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Get_user_profile_success</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-16T22:45:51.207287" elapsed="0.000749"/>
 </kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-11-16T17:00:27.629179" level="INFO">GET Request : url=https://reqres.in/api/users/12 
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2024-11-16T22:45:51.208479" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-11-16T22:45:51.404648" level="INFO">GET Request : url=https://reqres.in/api/users/12 
  path_url=/api/users/12 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-11-16T17:00:27.629526" level="INFO">GET Response : url=https://reqres.in/api/users/12 
+<msg time="2024-11-16T22:45:51.404952" level="INFO">GET Response : url=https://reqres.in/api/users/12 
  status=200, reason=OK 
- headers={'Date': 'Sat, 16 Nov 2024 10:00:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731744746&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=eSfavBs%2Fcd8ay58soUj4t%2FK6tXrx3iYE697Aj38%2BbDM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731744746&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=eSfavBs%2Fcd8ay58soUj4t%2FK6tXrx3iYE697Aj38%2BbDM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"156-dRpOqAStViWxQQvYl7n1A1GXGFw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '6481', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e36a25629e4a1b1-BKK', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=4432&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=771&amp;delivery_rate=491719&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=ee30682ecebfea4b&amp;ts=36&amp;x=0"'} 
+ headers={'Date': 'Sat, 16 Nov 2024 15:45:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731760456&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=bY7nWid7FAWxVaw9%2FH%2BJwV%2Fwj%2B5SnQ0YMXGSCp21iBE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731760456&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=bY7nWid7FAWxVaw9%2FH%2BJwV%2Fwj%2B5SnQ0YMXGSCp21iBE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"156-dRpOqAStViWxQQvYl7n1A1GXGFw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '2614', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e389c483cabce0d-SIN', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=33867&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=771&amp;delivery_rate=115658&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=1d6fd0c81dba2948&amp;ts=58&amp;x=0"'} 
  body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
  </msg>
-<msg time="2024-11-16T17:00:27.629895" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-11-16T22:45:51.405160" level="INFO">/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-16T22:45:51.405839" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>${url}</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.497689" elapsed="0.132282"/>
+<arg>Get_user_profile_success</arg>
+<arg>/api/users/${USER_ID}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="PASS" start="2024-11-16T22:45:51.208379" elapsed="0.197551"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2024-11-16T17:00:27.630174" elapsed="0.000122"/>
+<status status="PASS" start="2024-11-16T22:45:51.406149" elapsed="0.000123"/>
 </return>
-<msg time="2024-11-16T17:00:27.630698" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-11-16T22:45:51.406693" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${VALID_USER_ID}</arg>
-<status status="PASS" start="2024-11-16T17:00:27.495253" elapsed="0.135512"/>
+<status status="PASS" start="2024-11-16T22:45:51.205915" elapsed="0.200849"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-11-16T17:00:27.632811" level="INFO">Argument types are:
+<msg time="2024-11-16T22:45:51.408641" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.631326" elapsed="0.002396"/>
+<status status="PASS" start="2024-11-16T22:45:51.407260" elapsed="0.001600"/>
 </kw>
 <kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-11-16T17:00:27.635412" level="INFO">${response_body} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://contentcaddy.i...</msg>
+<msg time="2024-11-16T22:45:51.411495" level="INFO">${response_body} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://contentcaddy.i...</msg>
 <var>${response_body}</var>
 <arg>${response.content}</arg>
 <doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-11-16T17:00:27.634143" elapsed="0.001326"/>
+<status status="PASS" start="2024-11-16T22:45:51.409361" elapsed="0.002218"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-11-16T17:00:27.640438" level="INFO">Argument types are:
+<msg time="2024-11-16T22:45:51.414259" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response_body['data']['id']}</arg>
 <arg>${EXPECTED_ID}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.635840" elapsed="0.004710"/>
+<status status="PASS" start="2024-11-16T22:45:51.412017" elapsed="0.002420"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['email']}</arg>
 <arg>${EXPECTED_EMAIL}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.640826" elapsed="0.001240"/>
+<status status="PASS" start="2024-11-16T22:45:51.415513" elapsed="0.001873"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['first_name']}</arg>
 <arg>${EXPECTED_FIRST_NAME}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.642310" elapsed="0.004332"/>
+<status status="PASS" start="2024-11-16T22:45:51.417827" elapsed="0.001385"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['last_name']}</arg>
 <arg>${EXPECTED_LAST_NAME}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.647140" elapsed="0.001000"/>
+<status status="PASS" start="2024-11-16T22:45:51.423290" elapsed="0.001523"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body['data']['avatar']}</arg>
 <arg>${EXPECTED_AVATAR}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.648396" elapsed="0.000711"/>
+<status status="PASS" start="2024-11-16T22:45:51.425215" elapsed="0.001093"/>
 </kw>
 <doc>To verify get user profile API will return correct data when trying to get profile of an existing user</doc>
-<status status="PASS" start="2024-11-16T17:00:27.493734" elapsed="0.155605"/>
+<status status="PASS" start="2024-11-16T22:45:51.203853" elapsed="0.223034"/>
 </test>
-<test id="s1-t2" name="TC_API_002 Get User Profile But User Not Found" line="36">
+<test id="s1-s1-s1-t2" name="TC_API_002 Get User Profile But User Not Found" line="35">
 <kw name="Get User Profile">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-16T17:00:27.652385" level="INFO">${url} = https://reqres.in/api/users/1234</msg>
-<var>${url}</var>
-<arg>${BASE_URL}/${user_id}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-16T17:00:27.651947" elapsed="0.000485"/>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-16T22:45:51.434993" level="INFO">Creating Session using : alias=Get_user_profile_success, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Get_user_profile_success</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-16T22:45:51.430605" elapsed="0.004899"/>
 </kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-11-16T17:00:28.201369" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2024-11-16T22:45:51.436124" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-11-16T22:45:51.553947" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
  path_url=/api/users/1234 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-11-16T17:00:28.201695" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
+<msg time="2024-11-16T22:45:51.554151" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
  status=404, reason=Not Found 
- headers={'Date': 'Sat, 16 Nov 2024 10:00:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731751228&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Tm7bc6KFsftv43JTPgOrVrtgijL%2Fq43aGLguy1bfLTQ%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731751228&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Tm7bc6KFsftv43JTPgOrVrtgijL%2Fq43aGLguy1bfLTQ%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e36a2569e308960-BKK', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=4005&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2837&amp;recv_bytes=773&amp;delivery_rate=702781&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=f4c8a3f15152a77f&amp;ts=483&amp;x=0"'} 
+ headers={'Date': 'Sat, 16 Nov 2024 15:45:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731771923&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=0Z%2BqLzDTNJ7Zji4Wu%2BrDUF0LWUktoViStE6TAl9Txvk%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731771923&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=0Z%2BqLzDTNJ7Zji4Wu%2BrDUF0LWUktoViStE6TAl9Txvk%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '28', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8e389c493964cdea-SIN', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=35184&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=773&amp;delivery_rate=132816&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=12a3f61498b97b3e&amp;ts=44&amp;x=0"'} 
  body={} 
  </msg>
-<msg time="2024-11-16T17:00:28.202140" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</msg>
+<msg time="2024-11-16T22:45:51.554513" level="INFO">/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-16T22:45:51.554904" level="INFO">${response} = &lt;Response [404]&gt;</msg>
 <var>${response}</var>
-<arg>${url}</arg>
-<doc>Sends a GET request.</doc>
-<status status="FAIL" start="2024-11-16T17:00:27.652638" elapsed="0.559755">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
+<arg>Get_user_profile_success</arg>
+<arg>/api/users/${USER_ID}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="PASS" start="2024-11-16T22:45:51.435881" elapsed="0.119158"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="NOT RUN" start="2024-11-16T17:00:28.212585" elapsed="0.000043"/>
+<status status="PASS" start="2024-11-16T22:45:51.555199" elapsed="0.000088"/>
 </return>
+<msg time="2024-11-16T22:45:51.555580" level="INFO">${response} = &lt;Response [404]&gt;</msg>
 <var>${response}</var>
 <arg>${INVALID_USER_ID}</arg>
-<status status="FAIL" start="2024-11-16T17:00:27.650808" elapsed="0.562078">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
+<status status="PASS" start="2024-11-16T22:45:51.429725" elapsed="0.125904"/>
 </kw>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<arg>Should Be Equal As Numbers</arg>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-11-16T22:45:51.556870" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>404</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2024-11-16T17:00:28.213373" elapsed="0.000069"/>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-16T22:45:51.556000" elapsed="0.000988"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>{}</arg>
+<arg>${response.text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-16T22:45:51.557286" elapsed="0.000935"/>
 </kw>
 <doc>To verify get user profile API will return 404 when trying to get a profile of a non-existing user</doc>
-<status status="FAIL" start="2024-11-16T17:00:27.649695" elapsed="0.564181">HTTPError: 404 Client Error: Not Found for url: https://reqres.in/api/users/1234</status>
+<status status="PASS" start="2024-11-16T22:45:51.427943" elapsed="0.130587"/>
 </test>
-<status status="FAIL" start="2024-11-16T17:00:26.720037" elapsed="1.494670"/>
+<status status="PASS" start="2024-11-16T22:45:50.732108" elapsed="0.827181"/>
+</suite>
+<status status="PASS" start="2024-11-16T22:45:50.730478" elapsed="0.830536"/>
+</suite>
+<suite id="s1-s2" name="Fe" source="/Users/poonyavee/ttb-robot-ui-api/tests/fe">
+<suite id="s1-s2-s1" name="Login" source="/Users/poonyavee/ttb-robot-ui-api/tests/fe/login.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-16T22:45:51.859195" level="INFO">Opening browser 'headlesschrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-16T22:45:51.858741" elapsed="5.931633"/>
+</kw>
+<test id="s1-s2-s1-t1" name="TC_FE_001 Login success" line="46">
+<kw name="Login with username and password">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${TITLE_LOGIN_PAGE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:45:57.799416" elapsed="10.645221"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TEXTBOX_USERNAME}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:08.445740" elapsed="0.021303"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TEXTBOX_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:08.467359" elapsed="0.018534"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:08.486802" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>${TEXTBOX_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:08.486288" elapsed="0.429513"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:08.916583" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>${TEXTBOX_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:08.916101" elapsed="0.217761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:09.134669" level="INFO">Clicking element '//i[contains(text(), " Login")]'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:09.134233" elapsed="0.813523"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-11-16T22:45:57.795777" elapsed="12.153356"/>
+</kw>
+<kw name="Verify Login Success">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:10.025799" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<arg>${SUCCESS_MESSAGE_LOGIN}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-16T22:46:09.951740" elapsed="0.074223"/>
+</kw>
+<status status="PASS" start="2024-11-16T22:46:09.950034" elapsed="0.076137"/>
+</kw>
+<kw name="Logout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:10.028537" level="INFO">Clicking element '//i[contains(text(), " Logout")]'.</msg>
+<arg>${BUTTON_LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:10.028088" elapsed="0.965890"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:11.041885" level="INFO">Current page contains text 'You logged out of the secure area!'.</msg>
+<arg>${SUCCESS_MESSAGE_LOGOUT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-16T22:46:10.994634" elapsed="0.047424"/>
+</kw>
+<status status="PASS" start="2024-11-16T22:46:10.027366" elapsed="1.014906"/>
+</kw>
+<doc>To verify that users can login successfully when input a correct username and password.</doc>
+<tag>success</tag>
+<status status="PASS" start="2024-11-16T22:45:57.791807" elapsed="13.251196"/>
+</test>
+<test id="s1-s2-s1-t2" name="TC_FE_002 Login failed - Password incorrect" line="53">
+<kw name="Login with username and password">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${TITLE_LOGIN_PAGE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:11.048229" elapsed="0.039897"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TEXTBOX_USERNAME}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:11.088705" elapsed="0.030267"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TEXTBOX_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:11.119591" elapsed="0.015174"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:11.136419" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>${TEXTBOX_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:11.135603" elapsed="0.224263"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:11.361189" level="INFO">Typing text 'Password!' into text field 'id=password'.</msg>
+<arg>${TEXTBOX_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:11.360370" elapsed="0.266779"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:11.628082" level="INFO">Clicking element '//i[contains(text(), " Login")]'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:11.627628" elapsed="1.185442"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-11-16T22:46:11.046463" elapsed="1.767203"/>
+</kw>
+<kw name="Verify Login Failure">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:12.884024" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-16T22:46:12.826090" elapsed="0.058267"/>
+</kw>
+<arg>${ERROR_MESSAGE_INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-11-16T22:46:12.814723" elapsed="0.070009"/>
+</kw>
+<doc>To verify that users can login unsuccessfully when they input a correct username but wrong password.</doc>
+<tag>failed</tag>
+<status status="PASS" start="2024-11-16T22:46:11.043913" elapsed="1.845137"/>
+</test>
+<test id="s1-s2-s1-t3" name="TC_FE_003 Login failed - Username not found" line="59">
+<kw name="Login with username and password">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${TITLE_LOGIN_PAGE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:12.893019" elapsed="0.037719"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TEXTBOX_USERNAME}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:12.931073" elapsed="0.019466"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TEXTBOX_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-16T22:46:12.950999" elapsed="0.026428"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:12.978326" level="INFO">Typing text 'tomholland' into text field 'id=username'.</msg>
+<arg>${TEXTBOX_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:12.977825" elapsed="0.203230"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:13.182391" level="INFO">Typing text 'Password!' into text field 'id=password'.</msg>
+<arg>${TEXTBOX_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:13.181392" elapsed="0.184639"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:13.366728" level="INFO">Clicking element '//i[contains(text(), " Login")]'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-16T22:46:13.366334" elapsed="0.880856"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-11-16T22:46:12.892211" elapsed="1.355433"/>
+</kw>
+<kw name="Verify Login Failure">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-16T22:46:14.291143" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-16T22:46:14.249831" elapsed="0.041503"/>
+</kw>
+<arg>${ERROR_MESSAGE_INVALID_USERNAME}</arg>
+<status status="PASS" start="2024-11-16T22:46:14.248306" elapsed="0.043241"/>
+</kw>
+<doc>To verify that users cannot log in with a username that does not exist.</doc>
+<tag>failed</tag>
+<status status="PASS" start="2024-11-16T22:46:12.890559" elapsed="1.401475"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-16T22:46:14.294281" elapsed="0.208315"/>
+</kw>
+<status status="PASS" start="2024-11-16T22:45:51.569121" elapsed="22.933702"/>
+</suite>
+<status status="PASS" start="2024-11-16T22:45:51.563550" elapsed="22.941823"/>
+</suite>
+<status status="PASS" start="2024-11-16T22:45:50.664442" elapsed="23.842845"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0" skip="0">failed</stat>
+<stat pass="1" fail="0" skip="0">success</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Get User Profile">Get User Profile</stat>
+<stat pass="5" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Api">Tests.Api</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Get User Profile">Tests.Api.Get User Profile</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Fe">Tests.Fe</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2-s1" name="Login">Tests.Fe.Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-16T17:00:26.694996" level="WARN">Error in file '/Users/poonyavee/ttb-robot-ui-api/tests/api/get_user_profile.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-16T22:45:51.208479" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-11-16T22:45:51.436124" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
 </errors>
 </robot>

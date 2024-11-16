@@ -1,10 +1,9 @@
 *** Settings ***
 Library           RequestsLibrary
-Library           Collections
 Library           JSONLibrary
 
 *** Variables ***
-${BASE_URL}         https://reqres.in/api/users
+${BASE_URL}         https://reqres.in
 ${VALID_USER_ID}    12
 ${INVALID_USER_ID}  1234
 
@@ -17,9 +16,9 @@ ${EXPECTED_AVATAR}  https://reqres.in/img/faces/12-image.jpg
 *** Keywords ***
 Get User Profile
     [Arguments]    ${user_id}
-    ${url}=    Set Variable    ${BASE_URL}/${user_id}
-    ${response}=    Get    ${url} 
-    [Return]    ${response}
+    Create Session      Get_user_profile_success     ${BASE_URL}
+    ${response}=        Get request     Get_user_profile_success     /api/users/${USER_ID}
+    RETURN    ${response}
 
 *** Test Cases ***
 TC_API_001 Get User Profile Success
@@ -36,4 +35,5 @@ TC_API_001 Get User Profile Success
 TC_API_002 Get User Profile But User Not Found
     [Documentation]    To verify get user profile API will return 404 when trying to get a profile of a non-existing user
     ${response}=    Get User Profile    ${INVALID_USER_ID}
-    Run Keyword And Ignore Error     Should Be Equal As Numbers    ${response.status_code}    404
+    Should Be Equal As Numbers    ${response.status_code}    404
+    Should Be Equal As Strings     {}        ${response.text}

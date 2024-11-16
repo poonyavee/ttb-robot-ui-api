@@ -5,7 +5,7 @@ Suite Teardown   Close Browser
 
 *** Variables ***
 ${URL}                  http://the-internet.herokuapp.com/login
-${BROWSER}              chrome
+${BROWSER}              headlesschrome
 ${VALID_USERNAME}       tomsmith
 ${VALID_PASSWORD}       SuperSecretPassword!
 ${INVALID_USERNAME}     tomholland
@@ -24,7 +24,7 @@ ${BUTTON_LOGOUT}    //i[contains(text(), " Logout")]
 *** Keywords ***
 Login with username and password
     [Arguments]    ${username}    ${password}
-    Wait Until Page Contains    ${TITLE_LOGIN_PAGE}
+    Wait Until Page Contains    ${TITLE_LOGIN_PAGE}    
     Wait Until Page Contains Element    ${TEXTBOX_USERNAME}
     Wait Until Page Contains Element    ${TEXTBOX_PASSWORD}
     Input Text    ${TEXTBOX_USERNAME}    ${username}
