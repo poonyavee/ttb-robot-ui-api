@@ -1,2 +1,2 @@
-robot tests/api/get_user_profile.robot
-robot tests/fe/login.robot
+1. robot tests/api/get_user_profile.robot
+2. robot tests/fe/login.robot
